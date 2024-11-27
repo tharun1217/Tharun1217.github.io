@@ -677,30 +677,29 @@ header {
 
 /* Certifications Section */
 #certifications {
-    padding: 60px 0;
+    padding: 40px 20px; /* Reduced padding for mobile */
     background-color: #f4f4f4;
 }
 
 #certifications h2 {
-    font-size: 36px;
+    font-size: 28px; /* Adjusted for mobile */
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
+    text-align: center; /* Centered for better visibility on mobile */
 }
 
 .certifications-description {
-    font-size: 18px;
+    font-size: 16px; /* Slightly smaller font for mobile */
     color: #555;
-    margin-bottom: 40px;
-    max-width: 800px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-bottom: 30px;
+    max-width: 100%; /* Utilize full width for mobile */
+    text-align: center; /* Centered text */
 }
 
 .certifications-list {
-    width: 70%; /* Adjust width as per your preference */
-    margin-left: 0;
-    margin-right: auto;
+    width: 90%; /* Full width for mobile */
+    margin: 0 auto; /* Center the list */
     text-align: left;
 }
 
@@ -710,22 +709,23 @@ header {
 }
 
 .certifications-list li {
-    font-size: 16px;
+    font-size: 14px; /* Reduced font size for compact display */
     color: #555;
-    margin: 10px 0;
+    margin: 15px 0;
     position: relative;
+    padding-left: 30px; /* Ensure spacing for icons */
 }
 
 .certifications-list li i {
-    font-size: 18px;
+    font-size: 16px; /* Slightly smaller icon */
     color: #0066cc;
     position: absolute;
-    left: -25px;
-    top: 0;
+    left: 0; /* Adjusted for mobile */
+    top: 3px;
 }
 
 .view-certificate {
-    font-size: 14px;
+    font-size: 12px; /* Smaller font size for mobile */
     color: #0066cc;
     text-decoration: none;
     margin-left: 10px;
@@ -737,103 +737,129 @@ header {
     color: #ff9900;
 }
 
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+    #certifications h2 {
+        font-size: 24px; /* Further scaling for small screens */
+    }
+
+    .certifications-description {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .certifications-list li {
+        font-size: 12px;
+    }
+
+    .certifications-list li i {
+        font-size: 14px;
+    }
+
+    .view-certificate {
+        font-size: 12px;
+    }
+}
+
+
 
 /* Contact Section */
 #contact {
     padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
+    background-color: #f4f4f4;
 }
 
 #contact h2 {
     font-size: 28px;
-    margin-bottom: 10px;
+    font-weight: bold;
     color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .contact-description {
     font-size: 16px;
     color: #555;
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
 }
 
-/* Contact Form */
 .contact-form-container {
-    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
 }
 
 .contact-btn {
-    background-color: #00bcd4;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
     font-size: 16px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
-    background-color: #008ba3;
+    background-color: #ff9900;
 }
 
-.contact-form.hidden {
-    display: none;
+.contact-form {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
 }
 
 .contact-form iframe {
+    width: 100%;
+    height: 500px; /* Adjust height for mobile */
     border: none;
-    margin-top: 10px;
-    border-radius: 5px;
+    margin: 0 auto;
 }
 
 /* Contact Info */
 .contact-info {
     text-align: center;
-    margin-top: 20px;
+    width: 100%;
+    max-width: 400px;
 }
 
-.contact-item p {
-    font-size: 16px;
-    margin: 5px 0;
+.contact-item {
+    margin-bottom: 10px;
+    font-size: 14px;
     color: #555;
 }
 
-.contact-item a {
-    color: #00bcd4;
-    text-decoration: none;
-}
-
-.contact-item a:hover {
-    text-decoration: underline;
-}
-
-/* Social Icons */
 .contact-socials {
-    margin-top: 15px;
-}
-
-.contact-socials a {
-    margin: 0 10px;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease;
+    width: 32px;
+    height: 32px;
 }
 
-.social-icon:hover {
-    transform: scale(1.2);
+/* Mobile Specific Adjustments */
+@media (max-width: 768px) {
+    .google-form-iframe {
+        height: 400px;
+    }
+
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
+
 
 
 
